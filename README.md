@@ -28,12 +28,12 @@ void addPoints(vector<Point> &newPoints) {
 
 	int i = 0;
 
+	// shuffle points within batch. Not sufficient on its own
 	std::random_shuffle(newPoints.begin(), newPoints.end());
 
+	// compute target indices to shuffle points within random batches
 	for (auto &point : newPoints) {
-
 		int bucket = ud(re);
-
 		targetIndices.push_back(i + bucket * newPoints.size());
 
 		i++;

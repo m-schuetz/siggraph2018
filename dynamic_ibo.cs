@@ -1,4 +1,17 @@
 #version 450
+
+// 
+// Used for SIGGRAPH 2018 Poster "Progressive Real-Time Rendering of Unprocessed Point Clouds"
+// 
+// authors: Markus Schuetz, Michael Wimmer
+// affiliation: TU Wien, Institute of Visual Computing & Human-Centered Technology
+// 
+// license: BSD 2-Clause, see https://opensource.org/licenses/BSD-2-Clause
+//
+//
+// This compute shader writes indices of visible points to an index buffer object
+//
+
 layout(local_size_x = 8, local_size_y = 8) in;
 
 // the FBO color attachment that contains the point indices
